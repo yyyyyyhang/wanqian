@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+header {
+  height: 1.44rem;
+  background: #27b8fb;
+  width: 100%;
+  text-align: center; }
+  header span {
+    margin-top: .28rem;
+    display: inline-block;
+    width: 0.88rem;
+    height: 0.88rem; }
+    header span img {
+      display: block;
+      width: 0.88rem; }
+  header span:first-child {
+    float: left;
+    margin-left: 0.44rem; }
+  header span:last-child {
+    margin-right: 0.54rem;
+    float: right; }
+  header p {
+    display: inline-block;
+    color: white;
+    font-size: 0.64rem;
+    text-align: center; }
+
+section {
+  background: #f4f4f4;
+  flex-grow: 1;
+  overflow: auto; }
+  section .banner {
+    width: 100%;
+    overflow: hidden; }
+    section .banner ul {
+      width: 200%;
+      display: flex; }
+      section .banner ul li {
+        flex-grow: 1;
+        float: left;
+        width: 100%;
+        display: inline-block; }
+        section .banner ul li img {
+          width: 100%;
+          display: block; }
+  section .location {
+    background: white;
+    font-size: 0.54rem;
+    padding: 0 0.68rem;
+    margin-bottom: .5rem; }
+    section .location .location_header {
+      width: 100%;
+      padding: 0 .2rem;
+      overflow: hidden;
+      border-bottom: 1px solid #cccccc; }
+      section .location .location_header li {
+        display: inline-block;
+        width: 23%;
+        text-align: center;
+        padding: 0.6rem 0; }
+      section .location .location_header .location-active {
+        border-bottom: 3px solid #27b8fb; }
+    section .location .location_loc ul {
+      overflow: hidden;
+      text-align: center;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem; }
+      section .location .location_loc ul li {
+        display: inline-block;
+        width: 2.7rem;
+        height: 1.4rem;
+        border: 2px solid #27b8fb;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 1.4rem;
+        margin: 0.2rem;
+        font-size: .5rem;
+        color: #27b8fb; }
+  section .recommend {
+    padding: 0.9rem;
+    background: white; }
+    section .recommend .recommend-title {
+      font-size: 0.5rem;
+      border-left: 0.26rem solid #27b8fb;
+      padding: 0 0.2rem;
+      margin: 0.58rem 0; }
+    section .recommend .row {
+      width: 100%;
+      margin: 0.4rem 0;
+      overflow: hidden; }
+      section .recommend .row img {
+        width: 100%; }
+      section .recommend .row .row-float {
+        width: 4.3rem;
+        display: inline-block;
+        float: left;
+        font-size: .5rem; }
+        section .recommend .row .row-float img {
+          display: block; }
+        section .recommend .row .row-float p {
+          padding: .2rem;
+          border: 1px solid #27b8fb;
+          border-top: 0;
+          border-bottom: 0; }
+        section .recommend .row .row-float span {
+          display: block;
+          border: 1px solid #27b8fb;
+          text-align: center;
+          padding: 0.3rem 0;
+          color: #ce3839; }
+      section .recommend .row .img-float {
+        width: 4rem;
+        float: left;
+        margin: 0 0.2rem; }
+
+footer {
+  background: #26b8fb;
+  position: relative; }
+  footer div {
+    display: inline-block;
+    float: left;
+    font-size: 0.44rem;
+    width: 20%;
+    text-align: center;
+    color: white;
+    padding: 0.2rem 0;
+    position: relative; }
+    footer div a {
+      color: white; }
+      footer div a span {
+        display: inline-block;
+        width: 0.94rem;
+        height: 0.94rem; }
+        footer div a span img {
+          height: 100%;
+          display: block;
+          margin: 0 auto; }
+  footer .footer-actiove {
+    padding-top: 1.25rem;
+    width: 20%; }
+    footer .footer-actiove span {
+      width: 1.4rem;
+      height: 1.4rem;
+      position: absolute;
+      top: -0.8rem;
+      left: 50%;
+      background: #26b8fb;
+      border-radius: 50%;
+      padding: .2rem;
+      margin-left: -0.9rem; }

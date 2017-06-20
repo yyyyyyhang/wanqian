@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <style></style>
+</head>
+<body ng-controller="myCtrl">
+<ui-view></ui-view>
+<script src="../js/jquery-3.1.1.js"></script>
+<script src="../js/angular.min.js"></script>
+<script src="../js/angular-ui-router.js"></script>
+<script>
+
+    var app = angular.module("app", ["ui.router"])
+
+    app.controller("myCtrl", function ($scope) {
+        $scope.hide = function () {
+            $(".hezi").hide();
+        }
+        $scope.show = function () {
+            $(".hezi").show()
+        }
+    })
+
+    app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("/loginregister");
+        $stateProvider
+                .state("loginregister", {
+                    url: "/loginregister",
+                    templateUrl: "Login--Register.html"
+                })
+                .state("loginregister.login", {
+                    url: "/login",
+                    templateUrl: "login.html"
+                })
+                .state("loginregister.register", {
+                    url: "/register",
+                    templateUrl: "register.html"
+                })
+
+
+    }])
+</script>
+
+
+</body>
+</html>

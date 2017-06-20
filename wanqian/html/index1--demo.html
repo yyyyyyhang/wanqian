@@ -1,0 +1,111 @@
+<!DOCTYPE html >
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" href="../locality/play.css">
+    <script src="../js/fontSize.js"></script>
+    <style></style>
+</head>
+<body ng-controller="myCtrl">
+
+
+<section>
+    <ui-view></ui-view>
+</section>
+
+<footer>
+    <div class="footer-actiove">
+        <a href="#" ui-sref="index">
+            <span><img src="../locality/img/footer_06.png" alt=""></span>
+            <p>首页</p>
+        </a>
+    </div>
+    <div>
+        <a href="#" ui-sref="find">
+            <span><img src="../locality/img/footer_08.png" alt=""></span>
+            <p>发现</p>
+        </a>
+    </div>
+    <div>
+        <a href="#" ui-sref="upload">
+            <span><img src="../locality/img/footer_03.png" alt=""></span>
+            <p>上传</p>
+        </a>
+    </div>
+    <div>
+        <a href="#" ui-sref="news">
+            <span><img src="../locality/img/footer_11.png" alt=""></span>
+            <p>消息</p>
+        </a>
+    </div>
+    <div>
+        <a href="#" ui-sref="my">
+            <span><img src="../locality/img/footer_13.png" alt=""></span>
+            <p>我的</p>
+        </a>
+    </div>
+</footer>
+<script src="../js/jquery-3.1.1.js"></script>
+<script src="../js/angular.min.js"></script>
+<script src="../js/angular-ui-router.js"></script>
+
+<script>
+    var app = angular.module("app", ["ui.router"])
+
+    app.controller("myCtrl", function ($scope) {
+        $scope.class = function ($index) {
+//            $("footer div").removeClass("footer-actiove");
+//            $(this).addClass("footer-actiove")
+//                $("footer div").toggleClass("footer-actiove")
+//            console.log($index)
+        }
+    })
+
+    app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("/index");
+        $stateProvider
+                .state("index", {
+                    url: "/index",
+                    templateUrl: "dess.html"
+                })
+                .state("home.homep2", {
+                    url: "/homep2",
+                    templateUrl: ".html"
+                })
+                .state("find", {
+                    url: "/find",
+                    templateUrl: "find.html"
+                })
+                .state("upload", {
+                    url: "/upload",
+                    templateUrl: "upload.html"
+                })
+                .state("news", {
+                    url: "/news",
+                    templateUrl: "news.html"
+                })
+                .state("my", {
+                    url: "/my",
+                    templateUrl: "my.html"
+                })
+
+    }])
+
+    $("footer div").click(function () {
+        $("footer div").removeClass("footer-actiove")
+        $(this).addClass("footer-actiove")
+    })
+
+
+</script>
+
+
+</body>
+</html>
